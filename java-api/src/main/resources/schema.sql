@@ -65,3 +65,4 @@ create table book_user
 
 ALTER TABLE book_user ADD PRIMARY KEY(book_id, user_id);
 
+-- This is where we got up to on Day 1
