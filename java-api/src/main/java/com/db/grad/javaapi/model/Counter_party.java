@@ -9,6 +9,7 @@ public class Counter_party {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
+
     @Id
     @Column(name = "id", nullable = false)
     public int getId() {
@@ -18,6 +19,7 @@ public class Counter_party {
     public void setId(int id) {
         this.id = id;
     }
+
     @Column(name = "name", nullable = false)
     public String getName() {
         return name;
@@ -34,3 +36,4 @@ public class Counter_party {
                 ", name='" + name + '\'' +
                 '}';
     }
+}
