@@ -1,3 +1,10 @@
+DROP TABLE IF EXISTS book;
+DROP TABLE IF EXISTS user_info;
+DROP TABLE IF EXISTS counterparty;
+DROP TABLE IF EXISTS security;
+DROP TABLE IF EXISTS trades;
+DROP TABLE IF EXISTS book_user;
+
 CREATE TABLE book (
 id int NOT NULL  AUTO_INCREMENT PRIMARY KEY,
 Name varchar(255) NOT NULL
@@ -61,6 +68,6 @@ create table book_user
     FOREIGN key (book_id) REFERENCES book (id)
 );
 
-ALTER TABLE book_user ADD PRIMARY KEY(book_id, user_id);
+--ALTER TABLE book_user ADD PRIMARY KEY(book_id, user_id);
 
 -- This is where we got up to on Day 1
