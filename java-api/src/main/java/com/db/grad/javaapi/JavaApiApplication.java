@@ -25,20 +25,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.util.List;
 
 @SpringBootApplication
-public class JavaApiApplication implements CommandLineRunner {
+public class JavaApiApplication{
 
-	@Autowired
-	IBondsService iBondsService;
 
 	public static void main(String[] args) {
 		SpringApplication.run(JavaApiApplication.class, args);
 	}
 
-	@Override
-	public void run(String... args) throws Exception {
-		List<Security> securities = iBondsService.getAllSecurity();
-		for (Security security: securities) {
-			System.out.println(security);
-		}
-		}
+
 }
