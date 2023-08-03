@@ -1,5 +1,4 @@
 package com.db.grad.javaapi.model;
-
 import javax.persistence.*;
 
 @Entity
@@ -128,4 +127,5 @@ public class Trades {
                 ", trade_settlement_date='" + trade_settlement_date + '\'' +
                 '}';
     }
+
 }

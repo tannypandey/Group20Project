@@ -34,4 +34,3 @@ public class Counter_party {
                 ", name='" + name + '\'' +
                 '}';
     }
-}
