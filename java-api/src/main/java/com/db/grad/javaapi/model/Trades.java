@@ -1,4 +1,4 @@
-package com.db.grad.javaapi.service;
+package com.db.grad.javaapi.model;
 
 public class Trades {
     private int id;
