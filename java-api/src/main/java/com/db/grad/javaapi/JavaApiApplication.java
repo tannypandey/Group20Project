@@ -12,8 +12,11 @@ package com.db.grad.javaapi;//package com.db.grad.javaapi;
 //
 //}
 
+import com.db.grad.javaapi.model.Security;
+import com.db.grad.javaapi.repository.SecurityRepository;
 import com.db.grad.javaapi.model.Trades;
 import com.db.grad.javaapi.repository.TradesRepository;
+import com.db.grad.javaapi.service.IBondsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -25,7 +28,7 @@ import java.util.List;
 public class JavaApiApplication implements CommandLineRunner {
 
 	@Autowired
-	TradesRepository TradesRepository;
+	IBondsService iBondsService;
 
 	public static void main(String[] args) {
 		SpringApplication.run(JavaApiApplication.class, args);
@@ -33,9 +36,9 @@ public class JavaApiApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		List<Trades> trades = TradesRepository.findAll();
-		for (Trades trade: trades) {
-			System.out.println(trade);
+		List<Security> securities = iBondsService.getAllSecurity();
+		for (Security security: securities) {
+			System.out.println(security);
 		}
 		}
 }
