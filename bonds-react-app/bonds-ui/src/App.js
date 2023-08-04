@@ -1,11 +1,17 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import AllBonds from "C:/work/Group20Project/bonds-react-app/bonds-ui/src/components/AllBonds.jsx";
-import BondDetail from "C:/work/Group20Project/bonds-react-app/bonds-ui/src/components/BondDetail.jsx";
+import Maturity from "C:/work/Group20Project/bonds-react-app/bonds-ui/src/components/Maturity.jsx";
+import Books from "C:/work/Group20Project/bonds-react-app/bonds-ui/src/components/Books.jsx";
+import Code from "C:/work/Group20Project/bonds-react-app/bonds-ui/src/components/Code.jsx";
+import Issuer from "C:/work/Group20Project/bonds-react-app/bonds-ui/src/components/Issuer.jsx";
+import Welcome from "C:/work/Group20Project/bonds-react-app/bonds-ui/src/components/Welcome.jsx";
+import Counterparty from "C:/work/Group20Project/bonds-react-app/bonds-ui/src/components/Counterparty.jsx";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Route, Routes } from 'react-router-dom';
+
 
 
 function App() {
@@ -18,15 +24,24 @@ function App() {
                   <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                       <Nav.Link href="/allbonds">All Bonds</Nav.Link>
-                      <Nav.Link href="/bondsdetails">Bonds Details</Nav.Link>
+                      <Nav.Link href="/maturity">Maturity</Nav.Link>
+                      <Nav.Link href="/code">Code</Nav.Link>
+                      <Nav.Link href="/issuer">Issuer</Nav.Link>
+                      <Nav.Link href="/counterparty">Counterparty</Nav.Link>
+                      <Nav.Link href="/books">Books</Nav.Link>
+                      {/* Code, Issuer, Counterparty, Books, Login */}
                     </Nav>
                   </Navbar.Collapse>
             </Container>    
           </Navbar>
           <Routes>
             <Route path="allbonds" element={<AllBonds/>}/>
-            <Route path="bondsdetails" element={<BondDetail/>}/>
-            <Route path="/" element={<AllBonds/>}/>
+            <Route path="bondsdetails" element={<Maturity/>}/>
+            <Route path="bondsdetails" element={<Code/>}/>
+            <Route path="bondsdetails" element={<Issuer/>}/>
+            <Route path="bondsdetails" element={<Counterparty/>}/>
+            <Route path="bondsdetails" element={<Books/>}/>
+            <Route path="/" element={<Welcome/>}/>
           </Routes>
       </>
   );
