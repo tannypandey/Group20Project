@@ -19,5 +19,32 @@ public class BondsController {
     public List<Security> getAllSecurity() {
         return iBondsService.getAllSecurity();
     }
+
+    @GetMapping("/maturity")
+    public List<Security> getAllMaturity() {
+        return iBondsService.getAllMaturity();
+    }
+
+    @GetMapping("/issuer")
+    public List<Security> getAllIssuer() {
+        return iBondsService.getAllIssuer();
+    }
+
+    @GetMapping("/counterparty")
+    public List<Security> getAllCounterparty() {
+        return iBondsService.getAllCounterparty();
+    }
+
+    @GetMapping("/books")
+    public List<Security> getAllBooks() {
+        return iBondsService.getAllBooks();
+    }
+
+    @GetMapping("/code")
+    public List<Security> getAllCode() {
+        return iBondsService.getAllCode();
+    }
+
+
 }
 
