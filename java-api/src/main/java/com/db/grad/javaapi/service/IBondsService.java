@@ -8,5 +8,17 @@ import java.util.Optional;
 
 public interface IBondsService {
     public List<Security> getAllSecurity();
+
+    public List<Security> getAllMaturity();
+
+    public List<Security> getAllCode();
+
+    public List<Security> getAllIssuer();
+
+    public List<Security> getAllCounterparty();
+
+    public List<Security> getAllBooks();
+
+
 }
 

@@ -26,6 +26,31 @@ public class BondsHandler implements IBondsService
         return securityRepo.getAllSecurity();
     }
 
+    @Override
+    public List<Security> getAllMaturity() {
+        return securityRepo.getAllMaturity();
+    }
+
+    @Override
+    public List<Security> getAllCode() {
+        return null;
+    }
+
+    @Override
+    public List<Security> getAllIssuer() {
+        return null;
+    }
+
+    @Override
+    public List<Security> getAllCounterparty() {
+        return null;
+    }
+
+    @Override
+    public List<Security> getAllBooks() {
+        return null;
+    }
+
 //    @Override
 //    public Dog addDog(Dog theDog)
 //    {

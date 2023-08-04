@@ -29,7 +29,7 @@ const AllBonds = () => {
                 <thead>
                     <tr>
                         <th>id</th>
-                        <th>isip</th>
+                        <th>isin</th>
                         <th>cusip</th>
                         <th>issuer_name</th>
                         <th>maturity_date</th>
