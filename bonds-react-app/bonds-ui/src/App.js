@@ -19,7 +19,7 @@ function App() {
       <>
           <Navbar expand="lg" className="bg-body-tertiary">
             <Container>
-              <Navbar.Brand href="#home">Deutsche Bank Bonds</Navbar.Brand>
+              <Navbar.Brand>Deutsche Bank Bonds</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                   <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
@@ -29,7 +29,6 @@ function App() {
                       <Nav.Link href="/issuer">Issuer</Nav.Link>
                       <Nav.Link href="/counterparty">Counterparty</Nav.Link>
                       <Nav.Link href="/books">Books</Nav.Link>
-                      {/* Code, Issuer, Counterparty, Books, Login */}
                     </Nav>
                   </Navbar.Collapse>
             </Container>    
@@ -41,7 +40,7 @@ function App() {
             <Route path="bondsdetails" element={<Issuer/>}/>
             <Route path="bondsdetails" element={<Counterparty/>}/>
             <Route path="bondsdetails" element={<Books/>}/>
-            <Route path="/" element={<Welcome/>}/>
+            {/* <Route path="/" element={<Welcome/>}/> */}
           </Routes>
       </>
   );
