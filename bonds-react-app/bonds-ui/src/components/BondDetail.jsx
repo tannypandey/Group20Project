@@ -2,19 +2,6 @@ import React from 'react'
 import Table from 'react-bootstrap/Table';
 const BondDetail = (props) => {
   return (
-    // <div>
-    //     <p> id: {props.info.id} </p>
-    //     <p> isip: {props.info.isip}</p>
-    //     <p> cusip: {props.info.cusip}</p>
-    //     <p> issuer_name: {props.info.issuer_name}</p>
-    //     <p> maturity_date:{props.info.Id}</p>
-    //     <p> coupon:{props.info.Id} </p>
-    //     <p> type: {props.info.Id}</p>
-    //     <p> face_value: {props.info.Id}</p>
-    //     <p> currency:{props.info.Id} </p>
-    //     <p> status: {props.info.Id}</p>
-    // </div>
-
         <Table striped bordered hover>
         <thead>
         <tr>
@@ -48,4 +35,4 @@ const BondDetail = (props) => {
   )
 }
 
-export default BondDetail
+export default BondDetail;
