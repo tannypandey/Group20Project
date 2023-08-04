@@ -2,6 +2,7 @@ import React from 'react'
 import BondDetail from './BondDetail'
 import { getAllBonds } from '../services/bonds-service';
 import { useEffect, useState } from 'react';
+import Table from 'react-bootstrap/esm/Table';
 
 
 const AllBonds = () => {
@@ -28,10 +29,27 @@ const AllBonds = () => {
     
 
     return (
-    bonds.map(bond=>(
-            <BondDetail info={bond} key={bond.id.toString()} />
-            )
-        )
+        <Table striped bordered hover>
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>isip</th>
+                        <th>cusip</th>
+                        <th>issuer_name</th>
+                        <th>maturity_date</th>
+                        <th>coupon</th>
+                        <th>type</th>
+                        <th>face_value</th>
+                        <th>currency</th>
+                        <th>status</th>
+                    </tr>
+                    </thead>
+                <tbody>
+                    {bonds.map(bond=>(
+                            <BondDetail info={bond} key={bond.id.toString()} />
+                            ))}
+                </tbody>
+        </Table>
     )
  
 }
