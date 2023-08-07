@@ -2,7 +2,9 @@ package com.db.grad.javaapi.service;
 
 import com.db.grad.javaapi.model.Security;
 import com.db.grad.javaapi.model.Security;
+import com.db.grad.javaapi.model.Security_Trades;
 import com.db.grad.javaapi.repository.SecurityRepository;
+import com.db.grad.javaapi.repository.Security_TradesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +16,8 @@ public class BondsHandler implements IBondsService
 {
     @Autowired
     private SecurityRepository securityRepo;
+    @Autowired
+    private Security_TradesRepository security_tradesRepo;
 
     public BondsHandler( SecurityRepository securityRepo )
     {
@@ -26,14 +30,14 @@ public class BondsHandler implements IBondsService
         return securityRepo.getAllSecurity();
     }
 
-    @Override
-    public List<Security> getAllMaturity() {
-        return securityRepo.getAllMaturity();
-    }
+//    @Override
+//    public List<Security> getAllMaturity() {
+//        return securityRepo.getAllMaturity();
+//    }
 
     @Override
-    public List<Security> getAllCode() {
-        return null;
+    public List<Security_Trades> getAllCode() {
+        return security_tradesRepo.getAllCode();
     }
 
     @Override
