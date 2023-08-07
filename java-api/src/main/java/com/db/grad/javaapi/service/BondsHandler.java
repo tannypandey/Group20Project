@@ -1,12 +1,14 @@
 package com.db.grad.javaapi.service;
 import com.db.grad.javaapi.model.Maturity;
 import com.db.grad.javaapi.model.Security;
+import com.db.grad.javaapi.model.Security_Book;
 
 import com.db.grad.javaapi.model.Trades_cp_issuer;
 
 import com.db.grad.javaapi.model.Security_Trades;
 import com.db.grad.javaapi.repository.Maturity_Repository;
 import com.db.grad.javaapi.repository.SecurityRepository;
+import com.db.grad.javaapi.repository.Security_BookRepository;
 import com.db.grad.javaapi.repository.Security_TradesRepository;
 import com.db.grad.javaapi.repository.Trades_cp_issuerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +28,8 @@ public class BondsHandler implements IBondsService
     @Autowired
     private Trades_cp_issuerRepository trades_cp_issuerRepo;
 
+    @Autowired
+    private Security_BookRepository security_bookRepo;
 
     public BondsHandler( SecurityRepository securityRepo )
     {
@@ -59,8 +63,14 @@ public class BondsHandler implements IBondsService
     }
 
     @Override
-    public List<Security> getAllBooks() {
-        return null;
+    public List<Security_Book> getAllBooks() {
+        return security_bookRepo.getAllBooks();
+    }
+
+    @Override
+    public List<Security_Book> findByBookName(String book_name){
+        String query_name = book_name + "%";
+        return security_bookRepo.findByBookName(query_name);
     }
 
 }

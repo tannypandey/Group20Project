@@ -12,8 +12,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Route, Routes } from 'react-router-dom';
 
 
-
 function App() {
+
     return (
       <>
           <Navbar expand="lg" className="bg-body-tertiary">
@@ -36,6 +36,10 @@ function App() {
             <Route path="allbonds" element={<AllBonds/>}/>
             <Route path="maturity" element={<Maturity/>}/>
             <Route path="code" element={<Code/>}/>
+            <Route path="bondsdetails" element={<Issuer/>}/>
+            <Route path="bondsdetails" element={<Counterparty/>}/>
+            <Route path="books" element={<Books/>}/>
+            {/* <Route path="/" element={<Welcome/>}/> */}
             <Route path="issuer" element={<Issuer/>}/>
             <Route path="counterparty" element={<Counterparty/>}/>
             <Route path="books" element={<Books/>}/>
