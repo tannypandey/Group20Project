@@ -1,5 +1,6 @@
 package com.db.grad.javaapi.controller;
 
+import com.db.grad.javaapi.model.Maturity;
 import com.db.grad.javaapi.model.Security;
 import com.db.grad.javaapi.model.Security_Trades;
 import com.db.grad.javaapi.service.IBondsService;
@@ -21,10 +22,10 @@ public class BondsController {
         return iBondsService.getAllSecurity();
     }
 
-//    @GetMapping("/maturity")
-//    public List<Security> getAllMaturity() {
-//        return iBondsService.getAllMaturity();
-//    }
+    @GetMapping("/maturity")
+    public List<Maturity> getAllMaturity() {
+        return iBondsService.getAllMaturity();
+    }
 
     @GetMapping("/issuer")
     public List<Security> getAllIssuer() {

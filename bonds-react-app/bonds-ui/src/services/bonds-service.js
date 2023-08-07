@@ -7,3 +7,7 @@ export function getAllCode(){
         return http.get("/code");
         
 }
+export function getAllMaturity(){
+        return http.get("/maturity");
+        
+}

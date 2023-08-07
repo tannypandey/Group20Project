@@ -35,7 +35,7 @@ function App() {
           </Navbar>
           <Routes>
             <Route path="allbonds" element={<AllBonds/>}/>
-            <Route path="bondsdetails" element={<Maturity/>}/>
+            <Route path="maturity" element={<Maturity/>}/>
             <Route path="code" element={<Code/>}/>
             <Route path="bondsdetails" element={<Issuer/>}/>
             <Route path="bondsdetails" element={<Counterparty/>}/>
