@@ -7,7 +7,16 @@ export function getAllCode(){
         return http.get("/code");
         
 }
+
 export function getAllMaturity(){
         return http.get("/maturity");
+}
+
+export function getAllIssuer(){
+        return http.get("/issuer");
+        
+}
+export function getAllCounterparty(){
+        return http.get("/counterparty");
         
 }

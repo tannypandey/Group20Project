@@ -5,7 +5,6 @@ import Maturity from "C:/work/Group20Project/bonds-react-app/bonds-ui/src/compon
 import Books from "C:/work/Group20Project/bonds-react-app/bonds-ui/src/components/Books.jsx";
 import Code from "C:/work/Group20Project/bonds-react-app/bonds-ui/src/components/Code.jsx";
 import Issuer from "C:/work/Group20Project/bonds-react-app/bonds-ui/src/components/Issuer.jsx";
-import Welcome from "C:/work/Group20Project/bonds-react-app/bonds-ui/src/components/Welcome.jsx";
 import Counterparty from "C:/work/Group20Project/bonds-react-app/bonds-ui/src/components/Counterparty.jsx";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -37,10 +36,9 @@ function App() {
             <Route path="allbonds" element={<AllBonds/>}/>
             <Route path="maturity" element={<Maturity/>}/>
             <Route path="code" element={<Code/>}/>
-            <Route path="bondsdetails" element={<Issuer/>}/>
-            <Route path="bondsdetails" element={<Counterparty/>}/>
-            <Route path="bondsdetails" element={<Books/>}/>
-            {/* <Route path="/" element={<Welcome/>}/> */}
+            <Route path="issuer" element={<Issuer/>}/>
+            <Route path="counterparty" element={<Counterparty/>}/>
+            <Route path="books" element={<Books/>}/>
           </Routes>
       </>
   );
