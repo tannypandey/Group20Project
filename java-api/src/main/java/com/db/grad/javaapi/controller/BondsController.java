@@ -2,6 +2,7 @@ package com.db.grad.javaapi.controller;
 
 import com.db.grad.javaapi.model.Security;
 import com.db.grad.javaapi.model.Security_Trades;
+import com.db.grad.javaapi.model.Trades_cp_issuer;
 import com.db.grad.javaapi.service.IBondsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,18 +22,13 @@ public class BondsController {
         return iBondsService.getAllSecurity();
     }
 
-//    @GetMapping("/maturity")
-//    public List<Security> getAllMaturity() {
-//        return iBondsService.getAllMaturity();
-//    }
-
     @GetMapping("/issuer")
-    public List<Security> getAllIssuer() {
+    public List<Trades_cp_issuer> getAllIssuer() {
         return iBondsService.getAllIssuer();
     }
 
     @GetMapping("/counterparty")
-    public List<Security> getAllCounterparty() {
+    public List<Trades_cp_issuer> getAllCounterparty() {
         return iBondsService.getAllCounterparty();
     }
 

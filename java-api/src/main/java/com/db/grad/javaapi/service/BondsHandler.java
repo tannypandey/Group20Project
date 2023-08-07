@@ -1,10 +1,11 @@
 package com.db.grad.javaapi.service;
 
 import com.db.grad.javaapi.model.Security;
-import com.db.grad.javaapi.model.Security;
+import com.db.grad.javaapi.model.Trades_cp_issuer;
 import com.db.grad.javaapi.model.Security_Trades;
 import com.db.grad.javaapi.repository.SecurityRepository;
 import com.db.grad.javaapi.repository.Security_TradesRepository;
+import com.db.grad.javaapi.repository.Trades_cp_issuerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +19,10 @@ public class BondsHandler implements IBondsService
     private SecurityRepository securityRepo;
     @Autowired
     private Security_TradesRepository security_tradesRepo;
+    @Autowired
+    private Trades_cp_issuerRepository trades_cp_issuerRepo;
+
+
 
     public BondsHandler( SecurityRepository securityRepo )
     {
@@ -41,13 +46,13 @@ public class BondsHandler implements IBondsService
     }
 
     @Override
-    public List<Security> getAllIssuer() {
-        return null;
+    public List<Trades_cp_issuer> getAllIssuer() {
+        return trades_cp_issuerRepo.getAllIssuer();
     }
 
     @Override
-    public List<Security> getAllCounterparty() {
-        return null;
+    public List<Trades_cp_issuer> getAllCounterparty(){
+            return trades_cp_issuerRepo.getAllCounterparty();
     }
 
     @Override
@@ -55,56 +60,4 @@ public class BondsHandler implements IBondsService
         return null;
     }
 
-//    @Override
-//    public Dog addDog(Dog theDog)
-//    {
-//        return itsDogsRepo.save( theDog );
-//    }
-//
-//    @Override
-//    public long getNoOfDogs()
-//    {
-//        return itsDogsRepo.count();
-//    }
-//
-//    @Override
-//    public boolean removeDog(long uniqueId)
-//    {
-//        boolean result = false;
-//
-//        Optional<Dog> theDog = itsDogsRepo.findById(uniqueId);
-//        if(theDog.isPresent())
-//        {
-//            itsDogsRepo.delete(theDog.get());
-//            result = true;
-//        }
-//
-//        return  result;
-//    }
-//
-//    @Override
-//    public Dog getDogById(long uniqueId)
-//    {
-//        return itsDogsRepo.findById(uniqueId).get();
-//    }
-//
-//    @Override
-//    public Dog getDogByName(String dogsName )
-//    {
-//        Dog dogToFind = new Dog();
-//        dogToFind.setName(dogsName);
-//        List<Dog> dogs = itsDogsRepo.findByName(dogToFind);
-//        Dog result = null;
-//
-//        if( dogs.size() == 1)
-//            result = dogs.get(0);
-//
-//        return result;
-//    }
-//
-//    @Override
-//    public Dog updateDogDetails(Dog dogToUpdate)
-//    {
-//        return itsDogsRepo.save( dogToUpdate );
-//    }
 }

@@ -2,6 +2,7 @@ package com.db.grad.javaapi.service;
 
 import com.db.grad.javaapi.model.Security;
 import com.db.grad.javaapi.model.Security_Trades;
+import com.db.grad.javaapi.model.Trades_cp_issuer;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,13 +15,11 @@ public interface IBondsService {
 
     public List<Security_Trades> getAllCode();
 
-    public List<Security> getAllIssuer();
+    public List<Trades_cp_issuer> getAllIssuer();
 
-    public List<Security> getAllCounterparty();
+    public List<Trades_cp_issuer> getAllCounterparty();
 
     public List<Security> getAllBooks();
-
-
 
 
 }

@@ -7,3 +7,11 @@ export function getAllCode(){
         return http.get("/code");
         
 }
+export function getAllIssuer(){
+        return http.get("/issuer");
+        
+}
+export function getAllCounterparty(){
+        return http.get("/counterparty");
+        
+}
