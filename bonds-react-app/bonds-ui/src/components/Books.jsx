@@ -4,6 +4,9 @@ import { useEffect, useState } from 'react';
 import Table from 'react-bootstrap/esm/Table';
 import BookDetail from './BookDetail';
 import Button from 'react-bootstrap/Button'
+import Container from 'react-bootstrap/Container';
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
 
 
 const Books = () => {
@@ -75,19 +78,24 @@ const Books = () => {
 
   return (
     <>
-    <Button variant="primary" onClick={findBook_1}>Trading Book 1</Button>
-    <Button variant="primary" onClick={findBook_2}>Trading Book 2</Button>
-    <Button variant="primary" onClick={findBook_3}>Trading Book 3</Button>
-    <Button variant="primary" onClick={findBook_4}>Trading Book 4</Button>
-    <Button variant="primary" onClick={findBook_6}>Trading Book 6</Button>
-    <Table striped bordered hover>
+    <Container>
+    <Row>
+    <Col sm={4}>
+      <Row><Button variant="primary" style={{marginBottom: '10px'}} onClick={findBook_1}>Trading Book 1</Button></Row>
+      <Row><Button variant="primary" style={{marginBottom: '10px'}} onClick={findBook_2}>Trading Book 2</Button></Row>
+      <Row><Button variant="primary" style={{marginBottom: '10px'}} onClick={findBook_3}>Trading Book 3</Button></Row>
+      <Row><Button variant="primary" style={{marginBottom: '10px'}} onClick={findBook_4}>Trading Book 4</Button></Row>
+      <Row><Button variant="primary" style={{marginBottom: '10px'}} onClick={findBook_6}>Trading Book 6</Button></Row>
+    </Col>
+
+    <Col sm={8}><Table responsive striped bordered hover size='sm'>
               <thead>
                   <tr>
-                      <th>id</th>
-                      <th>status</th>
-                      <th>type</th>
-                      <th>currency</th>
-                      <th>cusip</th>
+                      <th>ID</th>
+                      <th>Status</th>
+                      <th>Type</th>
+                      <th>Currency</th>
+                      <th>CUSIP</th>
                   </tr>
                   </thead>
               <tbody>
@@ -95,11 +103,9 @@ const Books = () => {
                           <BookDetail info={book} key={book.id.toString()} />
                           ))}
               </tbody>
-      </Table>
-      {/* <Button variant="primary" onClick={getByBookFromAPI()}>Trading Book 2</Button>
-      <Button variant="primary" onClick={getByBookFromAPI()}>Trading Book 3</Button>
-      <Button variant="primary" onClick={getByBookFromAPI()}>Trading Book 4</Button>
-      <Button variant="primary" onClick={getByBookFromAPI()}>Trading Book 6</Button> */}
+      </Table></Col>
+      </Row>
+      </Container>
       </>
   )
 }
