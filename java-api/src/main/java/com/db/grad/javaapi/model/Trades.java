@@ -14,6 +14,8 @@ public class Trades {
     private String status;
     private int quantity;
     private float unit_price;
+
+    private String bond_holder;
     private String trade_type;
     private String trade_date;
     private String trade_settlement_date;
@@ -85,6 +87,17 @@ public class Trades {
     public void setUnit_price(float unit_price) {
         this.unit_price = unit_price;
     }
+
+    @Column(name = "bond_holder", nullable = false)
+    public String getBond_holder() {
+        return bond_holder;
+    }
+
+    public void setBond_holder(String bond_holder) {
+        this.bond_holder = bond_holder;
+    }
+
+
     @Column(name = "trade_type", nullable = false)
     public String getTrade_type() {
         return trade_type;
@@ -122,10 +135,10 @@ public class Trades {
                 ", status='" + status + '\'' +
                 ", quantity=" + quantity +
                 ", unit_price=" + unit_price +
+                ", bond_holder='" + bond_holder + '\'' +
                 ", trade_type='" + trade_type + '\'' +
                 ", trade_date='" + trade_date + '\'' +
                 ", trade_settlement_date='" + trade_settlement_date + '\'' +
                 '}';
     }
-
 }

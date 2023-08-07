@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS book;
 DROP TABLE IF EXISTS user_info;
-DROP TABLE IF EXISTS counterparty;
+DROP TABLE IF EXISTS counterparty cascade;
 DROP TABLE IF EXISTS security cascade;
 DROP TABLE IF EXISTS trades cascade;
 DROP TABLE IF EXISTS book_user;
@@ -51,6 +51,7 @@ CREATE TABLE trades
     status varchar(32) NOT NULL,
     quantity int NOT NULL,
     unit_price float NOT NULL,
+    bond_holder varchar(99) NOT NULL,
     trade_type varchar(32) NOT NULL,
     trade_date varchar (99) NOT NULL,
     trade_settlement_date varchar (99) NOT NULL,

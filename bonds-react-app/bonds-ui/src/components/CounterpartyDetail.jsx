@@ -1,17 +1,15 @@
 import React from 'react'
 
-const CodeDetail = (props) => {
+const CounterpartyDetail = (props) => {
   return (
         <tr>
             <td>{props.info.id}</td>
             <td>{props.info.status}</td>
             <td>{props.info.trade_type}</td>
-            <td>{props.info.currency}</td>
-            <td>{props.info.isin}</td>
-            <td>{props.info.cusip}</td>
+            <td>{props.info.bond_holder}</td>
         </tr>
 
   )
 }
 
-export default CodeDetail;
+export default CounterpartyDetail;

@@ -28,16 +28,16 @@ const AllBonds = () => {
         <Table striped bordered hover>
                 <thead>
                     <tr>
-                        <th>id</th>
-                        <th>isin</th>
-                        <th>cusip</th>
-                        <th>issuer_name</th>
-                        <th>maturity_date</th>
-                        <th>coupon</th>
-                        <th>type</th>
-                        <th>face_value</th>
-                        <th>currency</th>
-                        <th>status</th>
+                        <th>ID</th>
+                        <th>ISIN</th>
+                        <th>CUSIP</th>
+                        <th>ISSUER NAME</th>
+                        <th>MATURITY DATE</th>
+                        <th>COUPON</th>
+                        <th>TYPE</th>
+                        <th>FACE VALUE</th>
+                        <th>CURRENCY</th>
+                        <th>STATUS</th>
                     </tr>
                     </thead>
                 <tbody>

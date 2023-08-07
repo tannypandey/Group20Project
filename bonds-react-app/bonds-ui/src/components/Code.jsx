@@ -26,12 +26,12 @@ const Code = () => {
       <Table striped bordered hover>
               <thead>
                   <tr>
-                      <th>id</th>
-                      <th>status</th>
-                      <th>type</th>
-                      <th>currency</th>
-                      <th>isin</th>
-                      <th>cusip</th>
+                      <th>ID</th>
+                      <th>STATUS</th>
+                      <th>TYPE</th>
+                      <th>CURRENCY</th>
+                      <th>ISIN</th>
+                      <th>CUSIP</th>
                   </tr>
                   </thead>
               <tbody>
