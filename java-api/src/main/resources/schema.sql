@@ -1,8 +1,8 @@
 DROP TABLE IF EXISTS book;
 DROP TABLE IF EXISTS user_info;
 DROP TABLE IF EXISTS counterparty;
-DROP TABLE IF EXISTS security;
-DROP TABLE IF EXISTS trades;
+DROP TABLE IF EXISTS security cascade;
+DROP TABLE IF EXISTS trades cascade;
 DROP TABLE IF EXISTS book_user;
 
 CREATE TABLE book (

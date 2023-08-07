@@ -36,7 +36,7 @@ function App() {
           <Routes>
             <Route path="allbonds" element={<AllBonds/>}/>
             <Route path="bondsdetails" element={<Maturity/>}/>
-            <Route path="bondsdetails" element={<Code/>}/>
+            <Route path="code" element={<Code/>}/>
             <Route path="bondsdetails" element={<Issuer/>}/>
             <Route path="bondsdetails" element={<Counterparty/>}/>
             <Route path="bondsdetails" element={<Books/>}/>
